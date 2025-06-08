@@ -1,0 +1,24 @@
+[project]
+name = "marineeyeproj"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10.12"
+dependencies = [
+    "dask>=2025.5.1",
+    "geemap>=0.35.3",
+    "geopandas>=1.1.0",
+    "joblib>=1.5.1",
+    "matplotlib>=3.10.3",
+    "numpy>=2.2.6",
+    "opencv-python-headless>=4.11.0.86",
+    "pandas>=2.3.0",
+    "plotly>=6.1.2",
+    "pyqt5>=5.15.9",
+    "pyqt5-tools>=5.15.9.3.3",
+    "pyqtwebengine>=5.15.7",
+    "rasterio>=1.4.3",
+    "scikit-image>=0.25.2",
+    "scikit-learn>=1.7.0",
+    "sentinelhub>=3.11.1",
+]

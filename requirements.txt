@@ -1,0 +1,16 @@
+PyQt5
+PyQt5-tools
+numpy
+pandas
+matplotlib
+rasterio
+joblib
+dask
+sentinelhub
+geopandas
+geemap
+scikit-learn
+PyQtWebEngine
+plotly
+scikit-image
+opencv-python-headless
