@@ -35,6 +35,9 @@ from PyQt5.QtCore import Qt
 from PyQt5 import uic
 from marineeye.symbology import SymbologyDialogDiscrete, SymbologyDialogContinuous
 
+# import ui classes
+from connect_gee_ui import ConnectGEEDialog
+
 
 class HoverGraphicsView(QGraphicsView):
     def __init__(self, parent=None):
@@ -77,6 +80,14 @@ class MainWindow(QMainWindow):
     def setupSignals(self):
         self.actionOpen.triggered.connect(self.open_raster)
         self.layerTree.itemChanged.connect(self.handle_layer_visibility)
+        
+        # Signals to open Modules and UIs
+        self.actionGEE.triggered.connect(self.openConnectGEE)
+
+    def openConnectGEE(self):
+        # # Create an instance of the SymbologyDialogDiscrete and show it
+        self.connect_gee_dialog = ConnectGEEDialog()
+        self.connect_gee_dialog.exec_()  # Using exec_() for modal dialog
 
     def setupLayerTreeContextMenu(self):
         self.layerTree.setContextMenuPolicy(Qt.CustomContextMenu)
