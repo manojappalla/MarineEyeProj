@@ -33,7 +33,11 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,9">
       <item row="1" column="0">
-       <widget class="QPlainTextEdit" name="connectConsoleOutput"/>
+       <widget class="QPlainTextEdit" name="connectConsoleOutput">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item row="0" column="0">
        <layout class="QHBoxLayout" name="horizontalLayout">
