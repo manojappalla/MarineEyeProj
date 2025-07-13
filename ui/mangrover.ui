@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1164</width>
+    <height>890</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" rowstretch="2,3">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="mangroveTrainGrpBox">
+     <property name="title">
+      <string>Train Mangrove Model</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="mangroveTrainGridLayout">
+        <item row="3" column="1">
+         <widget class="QLabel" name="startDateTrainLbl">
+          <property name="text">
+           <string>Start Date:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="trainShpPathTxt"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QDateEdit" name="startDateTrain"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="boundaryShpPathTrainLbl">
+          <property name="text">
+           <string>Boundary Shapefile Path:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLineEdit" name="boundaryShpPathTrainTxt"/>
+        </item>
+        <item row="5" column="3">
+         <widget class="QPushButton" name="modelOutputPathTrainBtn">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QComboBox" name="classVarComboBox"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="boundaryShpPathTrainBtn">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QDateEdit" name="endDateTrain"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="modelOutputPathTrainTxt"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="modelOutputPathTrainLbl">
+          <property name="text">
+           <string>Model Output Folder:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="classVarLbl">
+          <property name="text">
+           <string>Choose Class Variable:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="trainShpPathLbl">
+          <property name="text">
+           <string>Training Shapefile Path:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="trainShpPathBtn">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="endDateTrainLbl">
+          <property name="text">
+           <string>End Date:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QPushButton" name="trainModelBtn">
+          <property name="text">
+           <string>Train Model</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QProgressBar" name="progressBarTrain">
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QGroupBox" name="mangroveDynamicsGrpBox">
+     <property name="title">
+      <string>Plot Mangrove Dynamics  </string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_6">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="2" column="0">
+         <widget class="QLabel" name="startDatePlotLbl">
+          <property name="text">
+           <string>Start Date:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="endDatePlotLbl">
+          <property name="text">
+           <string>End Date:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="modelPathPlotBtn">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QDateEdit" name="endDatePlot"/>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="boundaryShpPathPlotTxt"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="cloudCoverPlotLbl">
+          <property name="text">
+           <string>Cloud Cover:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="modelPathPlotTxt"/>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="boundaryShpPathPlotBtn">
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="modelPathPlotLbl">
+          <property name="text">
+           <string>Model Path:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QDateEdit" name="startDatePlot"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QSpinBox" name="cloudCoverPlotTxt">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="boundaryShpPathPlotLbl">
+          <property name="text">
+           <string>Boundary Shapefile Path:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="plotGraphsBtn">
+          <property name="text">
+           <string>Plot Graphs</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QProgressBar" name="progressBarPlot">
+          <property name="value">
+           <number>1</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QGroupBox" name="plotGrpBox">
+     <property name="title">
+      <string>Plots</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="1">
+       <widget class="QTabWidget" name="plotsTab">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="ndviPlotTab">
+         <attribute name="title">
+          <string>NDVI Plot</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QWebEngineView" name="ndviPlot" native="true"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="areaPlotTab">
+         <attribute name="title">
+          <string>Area Plot</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QWebEngineView" name="areaPlot" native="true"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header>PyQt5.QtWebEngineWidgets</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

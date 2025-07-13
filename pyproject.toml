@@ -24,4 +24,5 @@ dependencies = [
     "scikit-image>=0.25.2",
     "scikit-learn>=1.7.0",
     "sentinelhub>=3.11.1",
+    "setuptools>=80.9.0",
 ]

@@ -5,8 +5,10 @@ import io
 import subprocess
 import platform
 from PyQt5.QtCore import QThread, pyqtSignal
+from PyQt5.QtWidgets import QApplication
 
 PROJECT_NAME = None
+
 
 # Worker thread for Earth Engine authentication
 class EEAthenticationThread(QThread):
@@ -66,7 +68,6 @@ class EEAthenticationThread(QThread):
             self.output_signal.emit(f"Exception: {e}\n")
             self.output_signal.emit("\nAuthentication process Failed.\n")
 
-        
         try:
             global PROJECT_NAME
             ee.Initialize(project=PROJECT_NAME)
@@ -112,3 +113,10 @@ class ConnectGEEDialog(QtWidgets.QDialog):
 
         # Re-enable the authenticate button after completion
         self.connectBtn.setEnabled(True)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    win = ConnectGEEDialog()
+    win.show()
+    sys.exit(app.exec_())
