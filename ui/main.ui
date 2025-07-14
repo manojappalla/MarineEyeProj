@@ -88,7 +88,7 @@
      <x>0</x>
      <y>0</y>
      <width>1132</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -102,6 +102,7 @@
      <string>Process</string>
     </property>
     <addaction name="actionMangrover"/>
+    <addaction name="actionFloodcast"/>
    </widget>
    <widget class="QMenu" name="menuConnections">
     <property name="title">
@@ -143,6 +144,11 @@
   <action name="actionLogs">
    <property name="text">
     <string>Logs</string>
+   </property>
+  </action>
+  <action name="actionFloodcast">
+   <property name="text">
+    <string>Floodcast</string>
    </property>
   </action>
  </widget>
