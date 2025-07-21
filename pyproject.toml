@@ -8,12 +8,14 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10.12"
 dependencies = [
+    "cartopy>=0.24.1",
+    "copernicusmarine>=2.2.1",
     "dask>=2025.5.1",
     "geemap>=0.35.3",
     "geopandas>=1.1.0",
     "joblib>=1.5.1",
     "matplotlib>=3.10.3",
-    "numpy>=2.2.6",
+    "numpy<2",
     "opencv-python-headless>=4.11.0.86",
     "pandas>=2.3.0",
     "plotly>=6.1.2",
@@ -25,4 +27,6 @@ dependencies = [
     "scikit-learn>=1.7.0",
     "sentinelhub>=3.11.1",
     "setuptools>=80.9.0",
+    "tensorflow>=2.14.0",
+    "xarray>=2025.6.1",
 ]

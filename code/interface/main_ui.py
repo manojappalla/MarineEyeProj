@@ -38,6 +38,7 @@ from marineeye.symbology import SymbologyDialogDiscrete, SymbologyDialogContinuo
 # import ui classes
 from connect_gee_ui import ConnectGEEDialog
 from mangrover_ui import MangroverDialog
+from thermomarine_ui import ThermomarineDialog
 
 
 class HoverGraphicsView(QGraphicsView):
@@ -85,6 +86,7 @@ class MainWindow(QMainWindow):
         # Signals to open Modules and UIs
         self.actionGEE.triggered.connect(self.openConnectGEE)
         self.actionMangrover.triggered.connect(self.openMangrover)
+        self.actionThermomarine.triggered.connect(self.openThermomarine)
 
     # *************************** Execute Modules Here ********************************
     def openConnectGEE(self):
@@ -96,6 +98,11 @@ class MainWindow(QMainWindow):
         # # Create an instance of the SymbologyDialogDiscrete and show it
         self.connect_gee_dialog = MangroverDialog()
         self.connect_gee_dialog.exec_()  # Using exec_() for modal dialog
+
+    def openThermomarine(self):
+        # # Create an instance of the SymbologyDialogDiscrete and show it
+        self.open_thermomarine = ThermomarineDialog()
+        self.open_thermomarine.exec_()  # Using exec_() for modal dialog
 
     # *********************************************************************************
 
