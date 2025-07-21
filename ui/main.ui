@@ -109,6 +109,7 @@
      <string>Connections</string>
     </property>
     <addaction name="actionGEE"/>
+    <addaction name="actionCMEMS"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -149,6 +150,11 @@
   <action name="actionFloodcast">
    <property name="text">
     <string>Floodcast</string>
+   </property>
+  </action>
+  <action name="actionCMEMS">
+   <property name="text">
+    <string>CMEMS</string>
    </property>
   </action>
  </widget>
