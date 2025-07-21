@@ -38,6 +38,8 @@ from marineeye.symbology import SymbologyDialogDiscrete, SymbologyDialogContinuo
 # import ui classes
 from connect_gee_ui import ConnectGEEDialog
 from mangrover_ui import MangroverDialog
+from floodcast_ui import FloodcastWindow
+from connect_cmems_ui import ConnectCMEMSDialog
 
 
 class HoverGraphicsView(QGraphicsView):
@@ -85,6 +87,8 @@ class MainWindow(QMainWindow):
         # Signals to open Modules and UIs
         self.actionGEE.triggered.connect(self.openConnectGEE)
         self.actionMangrover.triggered.connect(self.openMangrover)
+        self.actionFloodcast.triggered.connect(self.openFloodcast)
+        self.actionCMEMS.triggered.connect(self.openConnectCMEMS)
 
     # *************************** Execute Modules Here ********************************
     def openConnectGEE(self):
@@ -94,8 +98,16 @@ class MainWindow(QMainWindow):
 
     def openMangrover(self):
         # # Create an instance of the SymbologyDialogDiscrete and show it
-        self.connect_gee_dialog = MangroverDialog()
-        self.connect_gee_dialog.exec_()  # Using exec_() for modal dialog
+        self.MangroveDialog = MangroverDialog()
+        self.MangroveDialog.exec_()  # Using exec_() for modal dialog
+
+    def openFloodcast(self):
+        self.FloodcastWindow = FloodcastWindow()
+        self.FloodcastWindow.show()  
+
+    def openConnectCMEMS(self):
+        self.connect_cmems_dialog = ConnectCMEMSDialog()
+        self.connect_cmems_dialog.exec_()
 
     # *********************************************************************************
 
