@@ -103,6 +103,7 @@
     </property>
     <addaction name="actionMangrover"/>
     <addaction name="actionFloodcast"/>
+    <addaction name="actionAlgalBloom"/>
    </widget>
    <widget class="QMenu" name="menuConnections">
     <property name="title">
@@ -155,6 +156,11 @@
   <action name="actionCMEMS">
    <property name="text">
     <string>CMEMS</string>
+   </property>
+  </action>
+  <action name="actionAlgalBloom">
+   <property name="text">
+    <string>AlgalBloom</string>
    </property>
   </action>
  </widget>
