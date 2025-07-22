@@ -88,7 +88,7 @@
      <x>0</x>
      <y>0</y>
      <width>1132</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -104,6 +104,7 @@
     <addaction name="actionMangrover"/>
     <addaction name="actionFloodcast"/>
     <addaction name="actionAlgalBloom"/>
+    <addaction name="actionThermomarine"/>
    </widget>
    <widget class="QMenu" name="menuConnections">
     <property name="title">
@@ -161,6 +162,11 @@
   <action name="actionAlgalBloom">
    <property name="text">
     <string>AlgalBloom</string>
+   </property>
+  </action>
+  <action name="actionThermomarine">
+   <property name="text">
+    <string>Thermomarine</string>
    </property>
   </action>
  </widget>

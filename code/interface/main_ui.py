@@ -41,6 +41,7 @@ from mangrover_ui import MangroverDialog
 from floodcast_ui import FloodcastWindow
 from connect_cmems_ui import ConnectCMEMSDialog
 from algal_bloom_ui import AlgalDashboard
+from thermomarine_ui import ThermomarineDialog
 
 
 class HoverGraphicsView(QGraphicsView):
@@ -91,6 +92,7 @@ class MainWindow(QMainWindow):
         self.actionFloodcast.triggered.connect(self.openFloodcast)
         self.actionCMEMS.triggered.connect(self.openConnectCMEMS)
         self.actionAlgalBloom.triggered.connect(self.openAlgalBloom)
+        self.actionThermomarine.triggered.connect(self.openThermomarine)
 
     # *************************** Execute Modules Here ********************************
     def openConnectGEE(self):
@@ -115,6 +117,10 @@ class MainWindow(QMainWindow):
         # # Create an instance of the SymbologyDialogDiscrete and show it
         self.AlgalDashboard = AlgalDashboard()
         self.AlgalDashboard.show()  # Using exec_() for modal dialog
+
+    def openThermomarine(self):
+        self.thermomarineDialog = ThermomarineDialog()
+        self.thermomarineDialog.exec_()
 
     # *********************************************************************************
 
