@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
         self.Activate_Mangrover.clicked.connect(self.openMangrover)
         self.Activate_Floodcast.clicked.connect(self.openFloodcast)
         self.Activate_Algal_Bloom.clicked.connect(self.openAlgalBloom)
-        self.Activate_SST.clicked.connect(self.openMangrover)
+        self.Activate_SST.clicked.connect(self.openThermomarine)
 
     # *************************** Execute Modules Here ********************************
     def openConnectGEE(self):
