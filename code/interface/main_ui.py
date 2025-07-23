@@ -69,21 +69,25 @@ class MainWindow(QMainWindow):
 
         self.setupGraphicsView()
         self.setupSignals()
-        self.setupLayerTreeContextMenu()
+        # self.setupLayerTreeContextMenu()
 
     def setupGraphicsView(self):
-        orig_view = self.mapView
-        self.mapView = HoverGraphicsView(self)
-        self.mapView.setObjectName("mapView")
-        self.mapView.setScene(self.scene)
-
-        layout = orig_view.parent().layout()
-        layout.replaceWidget(orig_view, self.mapView)
-        orig_view.deleteLater()
+        self.image_path = os.path.join("icons", "Marine_Eye_Icon.png")
+        self.Marine_Eye_Icon.setPixmap(QPixmap(self.image_path))
+        self.image_path = os.path.join("icons", "Mangrove_Icon.png")
+        self.Mangrover_Icon.setPixmap(QPixmap(self.image_path))
+        self.image_path = os.path.join("icons", "Floodcast_Icon.png")
+        self.Floodcast_Icon.setPixmap(QPixmap(self.image_path))
+        self.image_path = os.path.join("icons", "Algal_Bloom_Icon.png")
+        self.Algal_Bloom_Icon.setPixmap(QPixmap(self.image_path))
+        self.image_path = os.path.join("icons", "SST_Icon.png")
+        self.SST_Icon.setPixmap(QPixmap(self.image_path))
+        self.image_path = os.path.join("icons", "Main_UI_Background.png")
+        self.Interface_Picture.setPixmap(QPixmap(self.image_path))
 
     def setupSignals(self):
         self.actionOpen.triggered.connect(self.open_raster)
-        self.layerTree.itemChanged.connect(self.handle_layer_visibility)
+        # self.layerTree.itemChanged.connect(self.handle_layer_visibility)
 
         # Signals to open Modules and UIs
         self.actionGEE.triggered.connect(self.openConnectGEE)
@@ -91,6 +95,11 @@ class MainWindow(QMainWindow):
         self.actionFloodcast.triggered.connect(self.openFloodcast)
         self.actionCMEMS.triggered.connect(self.openConnectCMEMS)
         self.actionAlgalBloom.triggered.connect(self.openAlgalBloom)
+
+        self.Activate_Mangrover.clicked.connect(self.openMangrover)
+        self.Activate_Floodcast.clicked.connect(self.openFloodcast)
+        self.Activate_Algal_Bloom.clicked.connect(self.openAlgalBloom)
+        self.Activate_SST.clicked.connect(self.openMangrover)
 
     # *************************** Execute Modules Here ********************************
     def openConnectGEE(self):
