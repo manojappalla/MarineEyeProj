@@ -80,7 +80,10 @@ class FloodcastWindow(QMainWindow):
         self.Progress_Bar.setValue(6)
         comment = "Flood Index Maps are Plotted & Run is Successfull"
         self.append_label(comment,1)
-        if np.all(anomaly_matrix[:,-1] == 0):
+        threshold = 0.53
+        val = anomaly_matrix[:,-1].flatten()
+        val[val<threshold] = 0
+        if np.all(val == 0):
             comment = (f"Verdict: No Flood Possibility is Identified for the date {self.start_date}")
         else:
             comment = (f"Verdict: Flood Possibility is Identified for the date {self.start_date}")
