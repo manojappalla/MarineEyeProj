@@ -23,7 +23,7 @@ class EEAthenticationThread(QThread):
                 # Windows: Use `subprocess` without pexpect
                 process = subprocess.Popen(
                     [
-                        ".venv/bin/python",
+                        ".venv\\Scripts\\python.exe",
                         "-c",
                         "import ee; ee.Authenticate(auth_mode='localhost')",
                     ],
